@@ -18,7 +18,7 @@ class TranslateRepository implements TranslateRepositoryInterface
                 : null,
             'created_at' => now(),
             'updated_at' => now(),
-        ]);
+        ]); 
 
         return DB::table('translations')->select('id', 'key', 'translations', 'tags')->find($insertedId);
     }
