@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/register', [AuthenticationController::class, 'register']);
 Route::post('/login', [AuthenticationController::class, 'login']);
-Route::get('translations-export', [TranslationController::class, 'export']);
+Route::get('/translations-export', [TranslationController::class, 'export']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/translations', [TranslationController::class, 'store']);
